@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Deaths </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+           <ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(death)">
+     <ion-icon name="skull-outline" slot="start"></ion-icon>
+      Deaths:  {{ death?.death }} by {{ death?.cause}} & {{ death.number_of_deaths}} deaths.
+        </ion-item>
+    </ion-list>
+</ion-content>  
